@@ -1,0 +1,83 @@
+ /* ---------- 🌿 GLOBAL STYLES (same as about.html) ---------- */
+    /* (copy the full :root, header, footer, container, btn, etc. from about.html) */
+    /* For brevity, I include the identical block – in production you'd use one shared CSS file */
+    :root { --primary: #d4a76a; --primary-dark: #b45f2b; --secondary: #2e241b; --accent: #8c6d46; --light: #f8f4f0; --dark: #1a1a1a; --text: #444444; --white: #ffffff; --shadow: 0 5px 15px rgba(0,0,0,0.05); --transition: all 0.25s ease; --header-height: 80px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text); background: var(--light); overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; color: var(--secondary); margin-bottom: 1rem; font-weight: 600; }
+    h1 { font-size: 3.2rem; } h2 { font-size: 2.4rem; position: relative; padding-bottom: 0.8rem; }
+    h2:after { content: ''; position: absolute; bottom: 0; left: 0; width: 70px; height: 3px; background: var(--primary); }
+    .text-center h2:after { left: 50%; transform: translateX(-50%); }
+    p { margin-bottom: 1rem; color: #4a3b2c; }
+    a { text-decoration: none; color: var(--accent); transition: var(--transition); }
+    .container { width: 90%; max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+    .btn { display: inline-block; padding: 12px 30px; background: var(--primary); color: var(--white); border: none; border-radius: 50px; font-weight: 600; cursor: pointer; transition: var(--transition); box-shadow: var(--shadow); }
+    .btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.98); backdrop-filter: blur(8px); box-shadow: 0 2px 15px rgba(0,0,0,0.04); padding: 12px 0; }
+    .header-container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--secondary); }
+    .logo span { color: var(--primary); }
+    nav ul { display: flex; list-style: none; gap: 2rem; }
+    nav ul li a { color: var(--secondary); font-weight: 500; position: relative; padding-bottom: 4px; }
+    nav ul li a:after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--primary); transition: var(--transition); }
+    nav ul li a:hover:after, nav ul li a.active:after { width: 100%; }
+    nav ul li a.active { color: var(--primary-dark); font-weight: 600; }
+    .mobile-menu { display: none; font-size: 1.8rem; cursor: pointer; }
+    main { padding-top: 120px; padding-bottom: 60px; }
+
+    /* ----- BLOG & GALLERY ----- */
+    .blog-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem; margin: 3rem 0;
+    }
+    .blog-card {
+      background: white; border-radius: 28px; overflow: hidden;
+      box-shadow: var(--shadow); transition: 0.2s;
+    }
+    .blog-card:hover { transform: translateY(-6px); }
+    .blog-img { height: 220px; overflow: hidden; }
+    .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+    .blog-card:hover .blog-img img { transform: scale(1.05); }
+    .blog-content { padding: 1.8rem; }
+    .blog-date { color: var(--primary-dark); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+    .blog-content h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+    /* gallery */
+    .gallery-filters {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem; margin: 2rem 0;
+    }
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+      gap: 1.2rem; margin-top: 1.5rem;
+    }
+    .gallery-item {
+      height: 240px; border-radius: 20px; overflow: hidden; position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+    .gallery-item:hover img { transform: scale(1.1); }
+    .gallery-overlay {
+      position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.2rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: white;
+      opacity: 0; transition: 0.2s;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    /* footer (same as before) */
+    footer { background: var(--secondary); color: white; padding: 50px 0 30px; margin-top: 50px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-col h3 { color: white; margin-bottom: 1.2rem; position: relative; padding-bottom: 8px; }
+    .footer-col h3:after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: var(--primary); }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; color: rgba(255,255,255,0.8); }
+    .footer-links a { color: rgba(255,255,255,0.8); }
+    .footer-links a:hover { color: var(--primary); }
+    .social-links { display: flex; gap: 15px; margin-top: 15px; }
+    .social-links a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.08); border-radius: 50%; color: white; transition: 0.2s; }
+    .social-links a:hover { background: var(--primary); transform: translateY(-5px); }
+    .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+    @media (max-width: 768px) {
+      .mobile-menu { display: block; }
+      nav ul { position: fixed; top: 70px; left: -100%; width: 100%; height: calc(100vh - 70px); background: white; flex-direction: column; align-items: center; padding-top: 2rem; transition: 0.3s; gap: 1.5rem; }
+      nav ul.active { left: 0; }
+    }

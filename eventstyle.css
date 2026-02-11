@@ -1,0 +1,82 @@
+/* ---------- 🌿 GLOBAL STYLES (same) ---------- */
+:root {
+  /* ... */
+} /* full block as before */
+main {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+/* ----- EVENTS PAGE ----- */
+.events-hero {
+  background:
+    linear-gradient(rgba(46, 36, 27, 0.8), rgba(46, 36, 27, 0.8)),
+    url("https://images.unsplash.com/photo-1519676867240-f03562e64548?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80")
+      center/cover fixed;
+  color: white;
+  padding: 4rem 0;
+  border-radius: 40px;
+  margin-bottom: 3rem;
+}
+.events-hero h2,
+.events-hero p {
+  color: white;
+}
+.events-hero h2:after {
+  background: var(--primary);
+}
+.event-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+.event-type {
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid #f0e4d5;
+}
+.event-type i {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.8rem;
+}
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.package-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 28px;
+  border: 1px solid #f0e4d5;
+}
+.package-card h4 {
+  color: var(--primary-dark);
+}
+.event-inquiry {
+  background: var(--light);
+  border-radius: 40px;
+  padding: 3rem;
+  margin-top: 4rem;
+}
+.inquiry-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.inquiry-form .full-width {
+  grid-column: span 2;
+}
+@media (max-width: 768px) {
+  .inquiry-form {
+    grid-template-columns: 1fr;
+  }
+  .inquiry-form .full-width {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Chef Kalu · Kalu Kooks</title>
+  <link rel="stylesheet" href="./servicestyle.css"/>
+  <link rel="stylesheet" href="./contactstyle.css"/>
+  <link rel="stylesheet" href="./menustyle.css"/>
+  <link rel="stylesheet" href="./blogstyle.css"/>
+  <link rel="stylesheet" href="./style.css"/>
+  <link rel="stylesheet" href="./aboutstyle.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">Kalu<span>Kooks</span></a>
+      <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="about-section">
+        <div class="about-content">
+          <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chef Kalu plating a dish">
+          </div>
+          <div>
+            <h2>About Chef Kalu</h2>
+            <p style="font-size: 1.1rem;">With over five years immersed in the food industry, Chef Kalu has transformed a lifelong passion for cooking into a culinary venture that redefines event catering. Beyond the love for crafting exquisite dishes, Kalu brings a unique approach to styling and presentation, ensuring every event is not just a meal but a visual masterpiece.</p>
+            <p>The journey of Kalu Kooks began unexpectedly. A friend recognized my talent and suggested turning my culinary skills into a business. That conversation sparked the birth of Kalu Kooks – a name conceived that very morning. This pivotal moment set me on a path to share my culinary gifts with the world.</p>
+            <p>At Kalu Kooks, the focus is on creating unforgettable moments for every special event. Each menu is a bespoke creation, carefully tailored to meet the client's specific desires and needs. Chef Kalu is committed to delivering personalized culinary experiences that reflect the unique essence of each celebration.</p>
+            <a href="contact.html" class="btn" style="margin-top: 1rem;">Contact Chef Kalu</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Chef Kalu</h3>
+          <p>Weekend culinary delights and bespoke event catering. Serving the greater area with passion.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Chef</a></li>
+            <li><a href="services.html">Weekend Services</a></li>
+            <li><a href="events.html">Event Booking</a></li>
+            <li><a href="menu.html">Menu</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Culinary Street, Foodville</li>
+            <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@kalukooks.com</li>
+            <li><i class="fas fa-clock"></i> Friday–Sunday: 9am–6pm</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Service Area</h3>
+          <div style="height: 140px; background: #3a2e26; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #ecdcc2;">
+            🗺️ Foodville & 30mi radius
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Kalu Kooks. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cancellation Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      // Mobile menu toggle
+      const mobileBtn = document.querySelector('.mobile-menu');
+      const navUl = document.querySelector('nav ul');
+      if(mobileBtn) {
+        mobileBtn.addEventListener('click', () => navUl.classList.toggle('active'));
+      }
+      // Smooth scroll for anchor links (if any)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if(target) {
+            window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+            navUl.classList.remove('active');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

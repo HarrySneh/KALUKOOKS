@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef Kalu · Kalu Kooks — order menu 2026</title>
+  <link rel="stylesheet" href="./servicestyle.css"/>
+  <link rel="stylesheet" href="./contactstyle.css"/>
+  <link rel="stylesheet" href="./menustyle.css"/>
+  <link rel="stylesheet" href="./blogstyle.css"/>
+  <link rel="stylesheet" href="./style.css"/>
+  <link rel="stylesheet" href="./aboutstyle.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- 🧾 ONE CLEAN, COMBINED STYLESHEET (no missing files, no conflicts) -->
+  
+</head>
+<body>
+  <!-- 🧑‍🍳 FIXED HEADER (exact same navigation) -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">Kalu<span>Kooks</span></a>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="menu.html" style="color: #b45f2b;">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT with CONTAINER (padding-top for fixed header) -->
+  <main class="container">
+    <!-- 🏷️ FILTER SECTION -->
+    <div class="filter-section">
+      <div class="filter-title">🍽️ NEW MENU 2026 · ORDER ONLINE</div>
+      <div class="filter-buttons" id="filterContainer"></div>
+    </div>
+
+    <!-- 🛍️ MAIN ORDER AREA: menu grid + cart sidebar (flex) -->
+    <div class="main-order-area">
+      <!-- left: dynamic menu cards -->
+      <div class="menu-column">
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+
+      <!-- right: sticky cart -->
+      <div class="cart-column">
+        <div class="cart-title">🛒 Your order</div>
+        <div id="cartItemsContainer" class="cart-items">
+          <!-- cart items injected -->
+        </div>
+        <div id="cartTotalContainer" class="cart-total">
+          <span>Total</span>
+          <span id="cartTotalAmount">$0.00</span>
+        </div>
+        <button class="clear-cart" id="clearCartBtn">Clear cart</button>
+      </div>
+    </div> <!-- end main-order-area -->
+
+    <!-- 📋 CHECKOUT FORM – now correctly OUTSIDE the flex row, full width -->
+    <div class="checkout-section">
+      <h3 style="font-size: 1.6rem; font-weight: 600; color: #2e241b; margin-bottom: 0.25rem;">Complete checkout</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Full name</label>
+          <input type="text" id="name" placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="hello@example.com">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="phone" placeholder="(123) 456-7890">
+        </div>
+        <div class="form-group">
+          <label>Delivery / pickup address</label>
+          <input type="text" id="address" placeholder="Street, city, etc.">
+        </div>
+        <div class="form-group" style="grid-column: span 2;">
+          <label>Special instructions (allergies, preferences...)</label>
+          <textarea id="instructions" rows="2" placeholder="e.g. extra sauce, no onions..."></textarea>
+        </div>
+      </div>
+      <button class="place-order-btn" id="placeOrderBtn">🍽️ Place order · complete checkout</button>
+    </div>
+  </main>
+
+  <!-- FOOTER (exact same as provided, with map placeholder) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Chef Kalu</h3>
+          <p>Weekend culinary delights and bespoke event catering services. Serving the greater area with passion and creativity.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Chef</a></li>
+            <li><a href="#">Weekend Services</a></li>
+            <li><a href="#">Event Booking</a></li>
+            <li><a href="#">Menu</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Culinary Street, Foodville</li>
+            <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@chefkalu.com</li>
+            <li><i class="fas fa-clock"></i> Friday-Sunday: 9am-6pm</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Service Area</h3>
+          <div id="map" style="height: 150px; background: #4d3b30; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #ecdcc2; font-size: 0.9rem;">
+            🗺️ Serving Foodville & surroundings
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Kalu Kooks. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cancellation Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✨ ONE PERFECT SCRIPT: event delegation, no duplicate listeners, all menu data included -->
+  <script src="./menu.js"></script>
+</body>
+</html>
